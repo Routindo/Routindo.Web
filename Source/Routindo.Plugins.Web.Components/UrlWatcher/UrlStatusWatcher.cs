@@ -70,11 +70,12 @@ namespace Routindo.Plugins.Web.Components.UrlWatcher
                 if (!notify) return WatcherResult.NotFound;
                 _lastStatusCode = status;
                 string resultMessage = oldStatusCode.HasValue
-                    ? $"Response from Url {Url} has changed from {oldStatusCode} ({(int)oldStatusCode}) to {status} ({(int)status})"
-                    : $"Response from Url {Url} is {status} ({(int)status})";
+                    ? $"Response from Url {Url} has changed from {oldStatusCode} ({(int) oldStatusCode}) to {status} ({(int) status})"
+                    : $"Response from Url {Url} is {status} ({(int) status})";
                 return WatcherResult.Succeed(ArgumentCollection.New()
                         .WithArgument(UrlStatusWatcherResultArgs.Url, this.Url)
-                        .WithArgument(UrlStatusWatcherResultArgs.StatusCode, status.ToString("G")))
+                        .WithArgument(UrlStatusWatcherResultArgs.StatusCodeName, status.ToString("G")))
+                    .WithArgument(UrlStatusWatcherResultArgs.StatusCodeValue, (int) status)
                     .WithArgument(UrlStatusWatcherResultArgs.ResultMessage, resultMessage);
             }
             catch (Exception exception)

@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <views:UrlStatusWatcherView/>
-        <!--<TabControl>
-            <TabItem Header="UnzipArchiveView">
-                <views:UnzipArchiveView/>
+        
+        <TabControl>
+
+            <TabItem Header="Url Status Watcher">
+                <views:UrlStatusWatcherView/>
             </TabItem>
-            <TabItem Header="ZipDirectoryView">
-                <views:ZipDirectoryView/>
+
+            <TabItem Header="Ping Status Watcher">
+                <views:PingStatusWatcherView/>
             </TabItem>
-            <TabItem Header="ZipFilesView">
-                <views:ZipFilesView/>
-            </TabItem>
-        </TabControl>-->
+            
+        </TabControl>
     </Grid>
 </Window>
