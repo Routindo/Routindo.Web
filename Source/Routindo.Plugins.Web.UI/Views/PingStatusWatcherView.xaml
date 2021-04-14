@@ -45,7 +45,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Url Status Watcher" FontSize="18" FontWeight="Bold" />
+        <TextBlock Text="Ping Status Watcher" FontSize="18" FontWeight="Bold" />
         <StackPanel Grid.Row="1" Grid.IsSharedSizeScope="True" Margin="10">
             <StackPanel.Resources>
                 <Style TargetType="Button">
