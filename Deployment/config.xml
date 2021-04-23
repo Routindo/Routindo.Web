@@ -1,0 +1,24 @@
+<Deployment>
+	<Settings>
+		<Setting Key="SourcePath" Value="../Source/" />
+		<Setting Key="DependenciesPath" Value="../Libs/Shared" />
+		<Setting Key="PublishFolder" Value="../../../Deployment/Plugins/" />
+		<Setting Key="SharedLibsFolder" Value="../../../Libs/Shared/" />
+		<Setting Key="PackFolder" Value="../../../Deployment/" />
+		<Setting Key="PluginsBuilder" Value="../../../Deployment/PluginsBuilder.CLI/Routindo.PluginsBuilder.CLI.exe" />
+	</Settings>
+	<Projects>
+		<Project Order="1" Name="Web.Components" Share="False" Pack="False" SelfContained="False"
+		Directory="Routindo.Plugins.Web.Components" File="Routindo.Plugins.Web.Components.csproj" DeploymentDir="Routindo.Web" CleanDeploymentDir="True"/>
+		
+		<Project Order="2" Name="Web.UI" Share="False" Pack="False" SelfContained="False"
+		Directory="Routindo.Plugins.Web.UI" File="Routindo.Plugins.Web.UI.csproj" DeploymentDir="Routindo.Web" CleanDeploymentDir="False"/>
+		
+		<Project Order="3" Name="Web" Share="False" Pack="True" SelfContained="False"
+		Directory="Routindo.Plugins.Web" File="Routindo.Plugins.Web.csproj" DeploymentDir="Routindo.Web" CleanDeploymentDir="False"/>
+		
+	</Projects>
+	<Dependencies>
+		<Dependency Order="1" Directory="Contract" />
+	</Dependencies>
+</Deployment>
