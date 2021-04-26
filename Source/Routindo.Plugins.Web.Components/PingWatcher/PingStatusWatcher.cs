@@ -7,7 +7,7 @@ using Routindo.Contract.Watchers;
 
 namespace Routindo.Plugins.Web.Components.PingWatcher
 {
-    [PluginItemInfo(ComponentUniqueId, "Ping a specific Watcher",
+    [PluginItemInfo(ComponentUniqueId, "Ping a specific host",
          "Ping a specific host and reports status changing or watch a specific status"),
      ResultArgumentsClass(typeof(PingStatusWatcherResultArgs))]
     public class PingStatusWatcher: IWatcher
