@@ -7,7 +7,7 @@ using Routindo.Contract.Watchers;
 
 namespace Routindo.Plugins.Web.Components.UrlWatcher
 {
-    [PluginItemInfo(ComponentUniqueId, "Url Status Watcher",
+    [PluginItemInfo(ComponentUniqueId, nameof(UrlStatusWatcher),
          "Watch a specific URL for status code changing and notifies when server response equals a specific status", Category = "Web", FriendlyName = "Test Url"),
      ResultArgumentsClass(typeof(UrlStatusWatcherResultArgs))]
     public class UrlStatusWatcher: IWatcher
